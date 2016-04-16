@@ -1,0 +1,19 @@
+// The Term component
+
+.term {
+  text-align: center;
+}
+
+.term__image {
+  @include display(inline-block);
+  @include size(4*$base-spacing);
+  margin-bottom: $base-spacing;
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.term__title, .term__text {
+  font-family: $font-stack;
+}

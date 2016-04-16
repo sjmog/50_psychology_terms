@@ -1,0 +1,25 @@
+// Global layout styles
+
+.container {
+  @include outer-container;
+}
+
+.container--full {
+  max-width: none;
+}
+
+.term-container {
+  @include span-columns(6);
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+
+  height: 100vh;
+  @include media($mobile) {
+    height: 50vh;
+  }
+}
