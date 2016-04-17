@@ -1,0 +1,12 @@
+-
+  title: Thing
+  text: Hello World!
+  reality: Hello Other World!
+  index: 1
+  slug: thing
+-
+  title: Another Thing
+  text: Hello Again!
+  reality: "Hello Again Other World!"
+  index: 2
+  slug: another-thing

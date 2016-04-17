@@ -1,0 +1,11 @@
+fiftyTerms.controller('appController', ['dataService', function(dataService) {
+  var self = this;
+
+  self.terms = dataService.getData();
+
+  self.currentTerm = self.terms[0];
+
+  self.setCurrentTerm = function(term) {
+    return self.currentTerm = term;
+  };
+}]);

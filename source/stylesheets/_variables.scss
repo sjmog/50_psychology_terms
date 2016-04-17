@@ -1,5 +1,6 @@
 $mobile: new-breakpoint(max-width 500px 4);
 
-$base-spacing: 2rem;
+$base-spacing: 10vh;
+$navigation-height: $base-spacing;
 
 $font-stack: "baskerville", serif;

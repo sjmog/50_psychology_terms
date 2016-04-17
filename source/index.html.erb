@@ -4,20 +4,8 @@ title: 50 Terms | Psychology Terms, Explained
 
 <nav class="navigation-container">
   <ul class="navigation">
-    <li class="navigation__element">
-      <a class="navigation__link" href="">1</a>
-    </li>
-    <li class="navigation__element">
-      <a class="navigation__link" href="">2</a>
-    </li>
-    <li class="navigation__element">
-      <a class="navigation__link" href="">3</a>
-    </li>
-    <li class="navigation__element">
-      <a class="navigation__link" href="">4</a>
-    </li>
-    <li class="navigation__element">
-      <a class="navigation__link" href="">5</a>
+    <li class="navigation__element" ng-repeat="term in app.terms">
+      <a class="navigation__link" ng-click="app.setCurrentTerm(term);">{{ term.index }}</a>
     </li>
   </ul>
 </nav>
@@ -26,14 +14,14 @@ title: 50 Terms | Psychology Terms, Explained
   <section class="term-container term-container--misconception">
     <article class="term">
       <div class="term__image" style="background-image: url('http://placehold.it/200x200');"></div>
-      <h2 class="term__title">Term Title</h2>
-      <p class="term__text">Details about misconception</p>
+      <h2 class="term__title">{{ app.currentTerm.title }}</h2>
+      <p class="term__text">{{ app.currentTerm.text }}</p>
     </article>
   </section>
 
   <section class="term-container term-container--actual">
     <article class="term">
-      <p class="term__text">Term reality</p>
+      <p class="term__text">{{ app.currentTerm.reality }}</p>
     </article>
   </section>
 </main>

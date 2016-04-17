@@ -1,2 +1,19 @@
 // Navigation styles
 
+.navigation {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.navigation__element {
+  @include span-columns(1);
+}
+
+.navigation__link {
+  @include display(block);
+  @include size(100%);
+
+  text-align: center;
+  line-height: $navigation-height;
+}

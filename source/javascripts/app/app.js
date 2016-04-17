@@ -1,0 +1,1 @@
+var fiftyTerms = angular.module('fiftyTerms', []);
