@@ -6,7 +6,7 @@
 
 .term__image {
   @include display(inline-block);
-  @include size(4*$base-spacing);
+  @include size(2*$base-spacing);
   margin-bottom: $base-spacing;
 
   background-size: contain;
