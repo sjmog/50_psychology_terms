@@ -1,0 +1,1 @@
+fiftyTerms.controller("TermsController",["DataService",function(r){var e=this;e.terms=r.getData(),e.currentTerm=e.terms[0],e.setCurrentTerm=function(r){return e.currentTerm=r}}]);
