@@ -1,7 +1,7 @@
-fiftyTerms.controller('appController', ['dataService', function(dataService) {
+fiftyTerms.controller('TermsController', ['DataService', function(DataService) {
   var self = this;
 
-  self.terms = dataService.getData();
+  self.terms = DataService.getData();
 
   self.currentTerm = self.terms[0];
 

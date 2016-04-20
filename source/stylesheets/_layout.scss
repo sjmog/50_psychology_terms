@@ -18,8 +18,17 @@
   @include align-items(center);
   @include justify-content(center);
 
-  height: math(100vh - $navigation-height);
+  height: 100vh;
+  margin-top: -1 * $navigation-height;
+  padding-top: $navigation-height;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   @include media($mobile) {
     height: 50vh;
+    margin-top: 0;
+    padding-top: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }

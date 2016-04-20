@@ -12,11 +12,11 @@
 
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :'app/app' %>
-    <%= javascript_include_tag :'app/dataService' %>
-    <%= javascript_include_tag :'app/appController' %>
+    <%= javascript_include_tag :'app/DataService' %>
+    <%= javascript_include_tag :'app/TermsController' %>
   </head>
 
-  <body class="<%= page_classes %>" ng-controller="appController as app">
+  <body class="<%= page_classes %>" ng-controller="TermsController as termsCtrl">
     <%= yield %>
   </body>
 </html>
