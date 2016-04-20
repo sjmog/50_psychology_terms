@@ -15,13 +15,13 @@ title: 50 Terms | Psychology Terms, Explained
     <article class="term">
       <div class="term__image" style="background-image: url('http://placehold.it/200x200');"></div>
       <h2 class="term__title">{{ termsCtrl.currentTerm.title }}</h2>
-      <p class="term__text">{{ termsCtrl.currentTerm.misconception }}</p>
+      <p class="term__text" ng-bind-html="termsCtrl.currentTerm.misconception | rawHtml"></p>
     </article>
   </section>
 
   <section class="term-container term-container--reality">
     <article class="term">
-      <p class="term__text">{{ termsCtrl.currentTerm.reality }}</p>
+      <p class="term__text" ng-bind-html="termsCtrl.currentTerm.reality | rawHtml"></p>
     </article>
   </section>
 </main>
