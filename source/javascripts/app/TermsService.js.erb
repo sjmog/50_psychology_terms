@@ -1,0 +1,23 @@
+fiftyTerms.service('TermsService', ['TermFromJSONFactory', function(TermFromJSONFactory) {
+  var self = this;
+
+  self.getTerms = function() {
+    return self._terms();
+  }
+
+  self.findTermByPath = function(path) {
+    return self._terms().filter(function(term) {
+      return path === "/" + term.slug;
+    })[0];
+  };
+
+  self._terms = function() {
+    return <%= data.terms.map(&:to_json) %>
+      .map(JSON.parse)
+      .map(self._termFromJSON);
+  }
+
+  self._termFromJSON = function(json) {
+    return new TermFromJSONFactory(json);
+  }
+}]);

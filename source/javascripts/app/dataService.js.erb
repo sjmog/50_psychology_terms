@@ -1,5 +1,0 @@
-fiftyTerms.service('DataService', function() {
-  this.getData = function() {
-    return <%= data.terms.map(&:to_json) %>.map(JSON.parse);
-  }
-});

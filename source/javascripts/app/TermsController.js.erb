@@ -1,11 +1,25 @@
-fiftyTerms.controller('TermsController', ['DataService', function(DataService) {
+fiftyTerms.controller('TermsController', ['TermsService', 'LocationService', function(TermsService, LocationService) {
   var self = this;
 
-  self.terms = DataService.getData();
-
-  self.currentTerm = self.terms[0];
-
   self.setCurrentTerm = function(term) {
-    return self.currentTerm = term;
+    self.currentTerm = term;
+    LocationService.setLocation(term);
   };
+
+  self._init = function() {
+    self._setTerms();
+    self._setCurrentTermFromPath();
+  }
+
+  self._setTerms = function() {
+    self.terms = TermsService.getTerms();
+  }
+
+  self._setCurrentTermFromPath = function() {
+    var path = LocationService.getLocation();
+    var currentTerm = TermsService.findTermByPath(path) || self.terms[0];
+    self.setCurrentTerm(currentTerm);
+  }
+
+  self._init();
 }]);
