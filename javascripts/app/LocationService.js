@@ -1,0 +1,1 @@
+fiftyTerms.service("LocationService",["$location",function(t){this.getLocation=function(){return t.path()},this.setLocation=function(i){t.path("/"+i.slug).replace()}}]);
