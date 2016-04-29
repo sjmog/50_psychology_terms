@@ -6,6 +6,10 @@ fiftyTerms.controller('TermsController', ['TermsService', 'LocationService', fun
     LocationService.setLocation(term);
   };
 
+  self.activeClassIfCurrentTerm = function(term) {
+    return term === self.currentTerm ? 'navigation__element--active' : '';
+  };
+
   self._init = function() {
     self._setTerms();
     self._setCurrentTermFromPath();

@@ -125,7 +125,7 @@
   index: 21
   slug: operational-definition
 -
-  title: "p = 0.000"
+  title: "<i>p</i> = 0.000"
   misconception: "Even though this statistical expression, used in over 97,000 manuscripts according to <i>Google Scholar</i>, makes regular cameo appearances in our computer printouts, we should assiduously avoid inserting it in our <i>Results</i> sections."
   reality: "This expression implies erroneously that there is a <i>zero</i> probability that the investigators have committed a Type I error, that is, a false rejection of a true null hypothesis (<a href=\"REPLACEME\" data-title=\"Streiner, D. L. (2007). A short cut to rejection: how not to write the results section of a paper. Can. J. Psychiatry 52, 385–389.\">Streiner, 2007</a>). That conclusion is logically absurd, because unless one has examined essentially the entire population, there is always some chance of a Type I error, no matter how meager. Needless to say, the expression “<i>p</i> &lt; 0.000” is even worse, as the probability of committing a Type I error cannot be less than zero. Authors whose computer printouts yield significance levels of <i>p</i> = 0.000 should instead express these levels out to a large number of decimal places, or at least indicate that the probability level is below a given value, such as <i>p</i> &lt; 0.01 or <i>p</i> &lt; 0.001."
   index: 22

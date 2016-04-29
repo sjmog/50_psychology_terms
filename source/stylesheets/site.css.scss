@@ -1,12 +1,18 @@
 @charset "utf-8";
 @import "normalize";
 
+// Fonts
+@font-face {
+  font-family: GTPressura;
+  font-weight: bold;
+  src: url("/fonts/GT-Pressura-Bold.otf") format("opentype");
+}
+
 @import "vendor/bourbon/bourbon";
 // Bitters
 @import "vendor/base/base";
 @import "vendor/neat/neat";
 
-@import "variables";
 @import "layout";
 
 @import "components/navigation";

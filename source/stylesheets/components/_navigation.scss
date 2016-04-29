@@ -3,17 +3,28 @@
 .navigation {
   @include display(flex);
   @include align-items(center);
-  @include justify-content(center);
+  @include justify-content(flex-start);
+  
+  background-color: $navigation-color;
+  overflow-x: scroll;
 }
 
 .navigation__element {
-  @include span-columns(1);
+  
 }
 
 .navigation__link {
   @include display(block);
   @include size(100%);
+  @include heading-styles;
+  @include transition(width 0.2s ease-out);
 
+  width: $base-spacing*2;
   text-align: center;
   line-height: $navigation-height;
+  cursor: pointer;
 }
+
+.navigation__element--active > .navigation__link {
+  width: $base-spacing*4;
+};

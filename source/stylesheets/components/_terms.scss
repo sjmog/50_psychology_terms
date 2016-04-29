@@ -6,7 +6,7 @@
 
 .term__image {
   @include display(inline-block);
-  @include size(2*$base-spacing);
+  @include size(6*$base-spacing);
   margin-bottom: $base-spacing;
 
   background-size: contain;
@@ -14,6 +14,25 @@
   background-repeat: no-repeat;
 }
 
-.term__title, .term__text {
-  font-family: $font-stack;
+.term__title {
+  text-align: center;
+  @include heading-styles(2);
+}
+
+.term__text {
+  @include padding(0 $base-spacing);
+  @include main-container-styles(true);
+
+  max-width: $readable-limit;
+  overflow-y: scroll;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.term-container--misconception {
+  background-color: $misconception-color;
+}
+
+.term-container--reality {
+  background-color: $reality-color;
 }
